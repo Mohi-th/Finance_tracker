@@ -128,7 +128,7 @@ export default function TransactionList() {
       {/* Mobile card list */}
       <div className="hidden max-md:flex flex-col gap-2">
         {transactions.map((tx, i) => (
-          <div key={tx.id} className="px-4 py-3 border-b border-border animate-fade-in-up" style={{ animationDelay: `${i * 30}ms`, opacity: 0 }}>
+          <div key={tx.id} className="px-4 py-3 border-b border-border animate-fade-in-up max-[360px]:px-3" style={{ animationDelay: `${i * 30}ms`, opacity: 0 }}>
             <div className="flex items-center gap-3">
               <CategoryIcon category={tx.category} size={16} />
               <div className="flex-1 flex flex-col min-w-0">

@@ -44,14 +44,14 @@ export default function Modal({
 
   return (
     <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-[4px] flex items-center justify-center z-[200] p-4 animate-fade-in max-sm:items-end max-sm:p-3"
+      className="fixed inset-0 bg-black/60 backdrop-blur-[4px] flex items-center justify-center z-[200] p-4 animate-fade-in max-sm:items-end max-sm:p-3 max-[360px]:p-2"
       onClick={handleOverlayClick}
     >
       <div
         className={`bg-bg-secondary border border-border rounded-xl w-full max-h-[90vh] flex flex-col shadow-lg animate-scale-in max-sm:rounded-b-none max-sm:max-h-[85vh] ${sizeClasses[size]}`}
         ref={modalRef}
       >
-        <div className="flex items-center justify-between px-6 py-5 border-b border-border shrink-0">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-border shrink-0 max-[360px]:px-4 max-[360px]:py-4">
           <h2 className="text-lg font-bold text-text-primary">{title}</h2>
           {showClose && (
             <button
@@ -63,7 +63,7 @@ export default function Modal({
             </button>
           )}
         </div>
-        <div className="p-6 overflow-y-auto">
+        <div className="p-6 overflow-y-auto max-[360px]:p-4">
           {children}
         </div>
       </div>

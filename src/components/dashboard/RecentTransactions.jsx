@@ -14,7 +14,7 @@ export default function RecentTransactions() {
 
   return (
     <Card className="animate-fade-in-up" padding="none">
-      <div className="flex items-center justify-between px-5 pt-5 pb-3">
+      <div className="flex items-center justify-between px-5 pt-5 pb-3 max-[360px]:px-3 max-[360px]:pt-3">
         <h3 className="text-base font-bold text-text-primary">Recent Transactions</h3>
         <button
           className="flex items-center gap-1 text-xs font-semibold text-primary transition-[gap] duration-150 hover:gap-2"
@@ -25,7 +25,7 @@ export default function RecentTransactions() {
       </div>
       <div className="flex flex-col">
         {recent.map(tx => (
-          <div key={tx.id} className="flex items-center gap-3 px-5 py-3 transition-colors duration-150 border-b border-border last:border-b-0 hover:bg-bg-elevated">
+          <div key={tx.id} className="flex items-center gap-3 px-5 py-3 transition-colors duration-150 border-b border-border last:border-b-0 hover:bg-bg-elevated max-[360px]:px-3 max-[360px]:gap-2">
             <CategoryIcon category={tx.category} size={18} />
             <div className="flex-1 flex flex-col min-w-0">
               <span className="text-[0.8125rem] font-semibold text-text-primary whitespace-nowrap overflow-hidden text-ellipsis">{tx.description}</span>

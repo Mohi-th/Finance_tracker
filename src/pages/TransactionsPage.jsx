@@ -40,10 +40,10 @@ export default function TransactionsPage() {
   return (
     <>
       <Header title="Transactions" subtitle={`${allFilteredTx.length} transactions found`} />
-      <div className="p-6 flex flex-col gap-6 max-w-[1400px] mx-auto w-full max-lg:p-4 max-sm:p-3 max-sm:gap-4">
+      <div className="p-6 flex flex-col gap-6 max-w-[1400px] mx-auto w-full max-lg:p-4 max-sm:p-3 max-sm:gap-4 max-[360px]:p-2 max-[360px]:gap-3">
         <div className="flex flex-col gap-4">
           <TransactionFilters />
-          <div className="flex items-center gap-3 justify-end max-sm:flex-wrap">
+          <div className="flex items-center gap-3 justify-end max-sm:flex-wrap max-[360px]:flex-col max-[360px]:items-stretch">
             <Button variant="secondary" size="sm" icon={Download} onClick={handleExportCSV}>
               Export CSV
             </Button>

@@ -42,18 +42,18 @@ export default function Header({ title, subtitle }) {
   };
 
   return (
-    <header className="flex items-center justify-between h-[var(--spacing-header)] px-6 bg-bg-secondary border-b border-border sticky top-0 z-50 backdrop-blur-[12px] max-lg:px-4" id="main-header">
-      <div className="flex items-center gap-4">
+    <header className="flex items-center justify-between h-[var(--spacing-header)] px-6 bg-bg-secondary border-b border-border sticky top-0 z-50 backdrop-blur-[12px] max-lg:px-4 max-[360px]:px-3" id="main-header">
+      <div className="flex items-center gap-3 min-w-0">
         <button
-          className="hidden max-lg:flex text-text-secondary p-2 rounded-md transition-all duration-150 hover:text-text-primary hover:bg-bg-elevated"
+          className="hidden max-lg:flex text-text-secondary p-2 rounded-md transition-all duration-150 hover:text-text-primary hover:bg-bg-elevated shrink-0"
           onClick={() => dispatch(toggleMobileSidebar())}
           aria-label="Open menu"
         >
           <Menu size={22} />
         </button>
-        <div className="flex flex-col">
-          <h1 className="text-xl font-bold text-text-primary leading-tight max-sm:text-lg">{title || 'Dashboard'}</h1>
-          {subtitle && <p className="text-[0.8125rem] text-text-muted leading-tight">{subtitle}</p>}
+        <div className="flex flex-col min-w-0">
+          <h1 className="text-xl font-bold text-text-primary leading-tight max-sm:text-lg max-[360px]:text-base truncate">{title || 'Dashboard'}</h1>
+          {subtitle && <p className="text-[0.8125rem] text-text-muted leading-tight max-[360px]:hidden">{subtitle}</p>}
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export default function Header({ title, subtitle }) {
             className={`flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wide transition-all duration-200 border cursor-pointer ${currentRole.bg} ${currentRole.color} ${currentRole.border} hover:brightness-110`}
           >
             <currentRole.icon size={14} />
-            <span>{currentRole.label}</span>
+            <span className="max-[360px]:hidden">{currentRole.label}</span>
             <ChevronDown
               size={14}
               className={`transition-transform duration-200 opacity-60 ${dropdownOpen ? 'rotate-180' : ''}`}

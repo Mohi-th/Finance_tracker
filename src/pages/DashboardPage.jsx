@@ -14,7 +14,7 @@ export default function DashboardPage() {
         title={`${greeting} 👋`}
         subtitle={now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
       />
-      <div className="p-6 flex flex-col gap-6 max-w-[1400px] mx-auto w-full max-lg:p-4 max-sm:p-3 max-sm:gap-4">
+      <div className="p-6 flex flex-col gap-6 max-w-[1400px] mx-auto w-full max-lg:p-4 max-sm:p-3 max-sm:gap-4 max-[360px]:p-2 max-[360px]:gap-3">
         <SummaryCards />
 
         <div className="grid grid-cols-[1.2fr_1fr] gap-5 max-lg:grid-cols-1">

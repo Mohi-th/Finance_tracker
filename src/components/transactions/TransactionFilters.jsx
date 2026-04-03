@@ -54,7 +54,7 @@ export default function TransactionFilters() {
   return (
     <div className="flex flex-col gap-0 animate-fade-in">
       {/* Top bar: Search + Filters button + Sort button */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 max-[400px]:flex-wrap max-[400px]:gap-2">
         {/* Search input */}
         <div className="relative flex-1 min-w-0">
           <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" />
@@ -138,9 +138,9 @@ export default function TransactionFilters() {
         }`}
       >
         <div className="overflow-hidden">
-          <div className="flex items-end gap-3 flex-wrap p-4 bg-bg-secondary/50 border border-border rounded-lg">
+          <div className="grid grid-cols-4 gap-3 p-4 bg-bg-secondary/50 border border-border rounded-lg max-lg:grid-cols-2 max-[400px]:grid-cols-1">
             {/* Type filter */}
-            <div className="flex flex-col gap-1.5 flex-1 min-w-[130px]">
+            <div className="flex flex-col gap-1.5">
               <label className="text-[10px] font-bold text-text-muted uppercase tracking-wider">Type</label>
               <select
                 value={filters.type}
@@ -154,7 +154,7 @@ export default function TransactionFilters() {
             </div>
 
             {/* Category filter */}
-            <div className="flex flex-col gap-1.5 flex-1 min-w-[160px]">
+            <div className="flex flex-col gap-1.5">
               <label className="text-[10px] font-bold text-text-muted uppercase tracking-wider">Category</label>
               <select
                 value={filters.category}
@@ -176,7 +176,7 @@ export default function TransactionFilters() {
             </div>
 
             {/* From Date */}
-            <div className="flex flex-col gap-1.5 flex-1 min-w-[140px]">
+            <div className="flex flex-col gap-1.5">
               <label className="text-[10px] font-bold text-text-muted uppercase tracking-wider">From Date</label>
               <input
                 type="date"
@@ -187,7 +187,7 @@ export default function TransactionFilters() {
             </div>
 
             {/* To Date */}
-            <div className="flex flex-col gap-1.5 flex-1 min-w-[140px]">
+            <div className="flex flex-col gap-1.5">
               <label className="text-[10px] font-bold text-text-muted uppercase tracking-wider">To Date</label>
               <input
                 type="date"

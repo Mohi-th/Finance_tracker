@@ -51,7 +51,7 @@ export default function SummaryCards() {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-[480px]:grid-cols-1 stagger-children">
+    <div className="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-[480px]:grid-cols-1 max-[480px]:gap-3 stagger-children">
       {cards.map(card => {
         const Icon = card.icon;
         const value = summary[card.key] || 0;
